@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: java-vault-connect-test
+  cloud:
+    vault:
+      token: '00000000000000000'
+      host: 'localhost'
+      scheme: 'https'
