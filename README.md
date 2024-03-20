@@ -8,4 +8,6 @@ vault 를 활용하시 위한 테스트 프로젝트
 java 21
 spring boot 3.2.3
 docker
-vault:1.13.3
+
+## docker 설정 프로그램
+vault:1.13.3 -> docker를 통해서 설정해보려 하였으나 1일차 장렬하게 실패하였습니다....
