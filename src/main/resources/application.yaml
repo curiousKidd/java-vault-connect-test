@@ -5,4 +5,7 @@ spring:
     vault:
       token: '00000000000000000'
       host: 'localhost'
-      scheme: 'https'
+      scheme: 'http'
+      app-role:
+        role-id: 'f0f37297-5120-e0e3-ebe3-d3bc738d31e9'
+        secret-id: 'e56ca0b2-9c4b-ddb7-dfc2-536331c20f48'

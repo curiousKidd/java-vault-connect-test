@@ -9,8 +9,7 @@ import lombok.ToString;
 @ToString
 public class Vault {
 
-    private String dbUser;
-    private String dbPassword;
-    private String redisPassword;
+    private String name;
+    private String age;
 
 }

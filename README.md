@@ -11,3 +11,4 @@ docker
 
 ## docker 설정 프로그램
 vault:1.13.3 -> docker를 통해서 설정해보려 하였으나 1일차 장렬하게 실패하였습니다....
+2일차 -> docker compose 를 활용한 local vault 설치는 완료하였으나, vault 설정하는 부분은 실패함... yml 파일 업데이트
