@@ -1,4 +1,4 @@
-package kakao.aisp.javavaultconnecttest.model;
+package kakao.aisp.javavaultconnecttest.model.response;
 
 import lombok.Builder;
 import lombok.Getter;
