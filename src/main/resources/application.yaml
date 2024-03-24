@@ -3,7 +3,7 @@ spring:
     name: java-vault-connect-test
   cloud:
     vault:
-      #      token: '00000000000000000'
+      token: 'myroot'
       host: 'localhost'
       scheme: 'http'
       app-role:

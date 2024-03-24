@@ -1,61 +1,62 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.2.3'
-	id 'io.spring.dependency-management' version '1.1.4'
+    id 'java'
+    id 'org.springframework.boot' version '3.2.3'
+    id 'io.spring.dependency-management' version '1.1.4'
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '21'
+    sourceCompatibility = '21'
 }
 
 configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 ext {
-	set('springCloudVersion', "2023.0.0")
+    set('springCloudVersion', "2023.0.0")
 }
 
 dependencies {
-	implementation 'org.springframework.cloud:spring-cloud-starter-vault-config'
-	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    developmentOnly 'org.springframework.boot:spring-boot-starter-web'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation 'org.springframework.cloud:spring-cloud-starter-vault-config'
 
-	// mysql (spring boot 2.7.8 이후)
-	runtimeOnly 'com.mysql:mysql-connector-j'
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    // mysql (spring boot 2.7.8 이후)
+//	runtimeOnly 'com.mysql:mysql-connector-j'
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 
-	//mybatis core
-	implementation 'org.mybatis:mybatis:3.5.13'
-	//mybatis-spring integration
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.1'
+    //mybatis core
+//    implementation 'org.mybatis:mybatis:3.5.13'
+    //mybatis-spring integration
+//    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.1'
 
-	//JPA
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.hibernate.validator:hibernate-validator'
+    //JPA
+//	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//	implementation 'org.hibernate.validator:hibernate-validator'
 
-	//feignClient
-	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    //feignClient
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 
 }
 
 dependencyManagement {
-	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
-	}
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
