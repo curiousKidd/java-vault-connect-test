@@ -1,6 +1,7 @@
 package kakao.aisp.javavaultconnecttest.serviceClient;
 
-import kakao.aisp.javavaultconnecttest.model.resquest.VaultRequestDTO;
+import kakao.aisp.javavaultconnecttest.model.DTO.response.VaultResponseDTO;
+import kakao.aisp.javavaultconnecttest.model.DTO.resquest.VaultRequestDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface VaultFeignClient {
 
     @PostMapping(path = "/auth/approle/login", produces = "application/json")
-    Object getAuthToken(@RequestBody VaultRequestDTO dto);
+    VaultResponseDTO getAuthToken(@RequestBody VaultRequestDTO dto);
 
 }

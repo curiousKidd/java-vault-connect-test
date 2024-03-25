@@ -1,9 +1,12 @@
 package kakao.aisp.javavaultconnecttest;
 
-import kakao.aisp.javavaultconnecttest.model.resquest.VaultRequestDTO;
+import kakao.aisp.javavaultconnecttest.model.DTO.response.VaultResponseDTO;
+import kakao.aisp.javavaultconnecttest.model.DTO.resquest.VaultRequestDTO;
 import kakao.aisp.javavaultconnecttest.serviceClient.VaultFeignClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,16 +25,16 @@ public class testController {
     private String secretId;
 
     @GetMapping("/token")
-    public void test() {
+    public HttpEntity<VaultResponseDTO> test() {
 
         VaultRequestDTO vaultRequestDTO = VaultRequestDTO.builder()
                 .role_id(roleId)
                 .secret_id(secretId)
                 .build();
 
-        Object authToken = vaultFeignClient.getAuthToken(vaultRequestDTO);
+        VaultResponseDTO authToken = vaultFeignClient.getAuthToken(vaultRequestDTO);
 
-        authToken.toString();
+        return ResponseEntity.ok().body(authToken);
 
     }
 

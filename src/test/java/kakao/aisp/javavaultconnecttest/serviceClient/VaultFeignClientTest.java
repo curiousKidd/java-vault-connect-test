@@ -1,6 +1,6 @@
 package kakao.aisp.javavaultconnecttest.serviceClient;
 
-import kakao.aisp.javavaultconnecttest.model.resquest.VaultRequestDTO;
+import kakao.aisp.javavaultconnecttest.model.DTO.resquest.VaultRequestDTO;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
