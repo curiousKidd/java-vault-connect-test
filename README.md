@@ -19,4 +19,5 @@ vault:1.13.3 -> docker를 통해서 설정해보려 하였으나 1일차 장렬�
      -> 로그인 token 은 정상적으로 가져옴
      -> 이후 data를 가져오는 api 작성중
 
-vault secret data 가져오기 성공     
+6일차 -> vault secret data 가져오기 성공
+7일차 -> spring 설정을 통해서 데이터를 가져오기 시도
