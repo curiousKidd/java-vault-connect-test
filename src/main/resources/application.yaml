@@ -1,15 +1,19 @@
 spring:
   application:
     name: java-vault-connect-test
+  config:
+    import: vault://secret/secret_test
   cloud:
     vault:
-      token: 'myroot'
+      #      token: 'myroot'
       host: 'localhost'
       scheme: 'http'
       port: 8200
       app-role:
         role-id: 'f0f37297-5120-e0e3-ebe3-d3bc738d31e9'
         secret-id: 'ce508976-90fc-07e1-310c-2d22eea65697'
-      kv:
-        backend: 'secret'
-        application-name: "secret_test"
+      #      kv:
+      #        backend: 'secret'
+      #        application-name: "secret_test"
+      authentication: approle
+
