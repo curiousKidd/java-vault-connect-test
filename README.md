@@ -7,7 +7,8 @@ vault 를 활용하시 위한 테스트 프로젝트
 
 java 21
 spring boot 3.2.3
-docker
+docker, docker compose
+mysql
 
 ## docker 설정 프로그램
 vault:1.13.3 -> docker를 통해서 설정해보려 하였으나 1일차 장렬하게 실패하였습니다....
@@ -22,3 +23,7 @@ vault:1.13.3 -> docker를 통해서 설정해보려 하였으나 1일차 장렬�
 6일차 -> vault secret data 가져오기 성공
 7일차 -> spring 설정을 통해서 데이터를 가져오기 시도
 8일차 -> spring 설정을 통해서 get vault info 성공
+
+### mysql
+1일차 -> docker compose 설정 추가
+     -> mysql 테스트 디비 설치
