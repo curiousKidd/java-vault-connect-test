@@ -2,7 +2,7 @@ spring:
   application:
     name: java-vault-connect-test
   config:
-    import: vault://secret/secret_test
+    import: vault://secret/mysql
   cloud:
     vault:
       #      token: 'myroot'
@@ -16,4 +16,9 @@ spring:
       #        backend: 'secret'
       #        application-name: "secret_test"
       authentication: approle
+  datasource:
+    username: ${vault.user}
+    password: ${vault.password}
+    url: jdbc:mysql://127.0.0.1:3306/employees
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
