@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
@@ -19,5 +21,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         Pageable pageable = Pageable.ofSize(10);
 
         return employeeRepository.findAll(pageable);
+    }
+
+    @Override
+    public List<Employee> getEmployeesByLimit() {
+        return employeeRepository.getEmployees(10);
     }
 }
