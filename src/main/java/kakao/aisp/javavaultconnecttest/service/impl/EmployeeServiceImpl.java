@@ -1,7 +1,7 @@
 package kakao.aisp.javavaultconnecttest.service.impl;
 
-import kakao.aisp.javavaultconnecttest.Repository.EmployeeRepository;
 import kakao.aisp.javavaultconnecttest.model.entity.Employee;
+import kakao.aisp.javavaultconnecttest.repository.EmployeeRepository;
 import kakao.aisp.javavaultconnecttest.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

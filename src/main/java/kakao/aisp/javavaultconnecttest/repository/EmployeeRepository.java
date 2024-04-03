@@ -1,4 +1,4 @@
-package kakao.aisp.javavaultconnecttest.Repository;
+package kakao.aisp.javavaultconnecttest.repository;
 
 import feign.Param;
 import kakao.aisp.javavaultconnecttest.model.entity.Employee;
