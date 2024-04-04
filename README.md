@@ -29,3 +29,5 @@ vault:1.13.3 -> docker를 통해서 설정해보려 하였으나 1일차 장렬�
      -> mysql 테스트 디비 설치
 2일차 -> 테스트 디비 연결 및 테스트 성공
 3일차 -> database config bean 생성 테스트 / 학습 필요.....
+4일차 -> docs 문서 참고하여 config bean 등록 후 연결 완료 / get test 완료
+//https://docs.spring.io/spring-data/jpa/reference/repositories/create-instances.html
